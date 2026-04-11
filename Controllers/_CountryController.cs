@@ -1,20 +1,17 @@
-﻿using DALCLASS;
-using DALCLASS.InterfaceModal;
-using DALCLASS.Services;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics.Metrics;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TrackingWebAPI.Interfaces;
+using TrackingWebAPI.Models;
 
 namespace TrackingWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
-    public class _CountryController : ControllerBase
+    public class CountryController : ControllerBase
     {
-        private readonly CountryServices _countryService;
+        private readonly ICountry _countryService;
 
-        public _CountryController(CountryServices countryService)
+        public CountryController(ICountry countryService)
         {
             _countryService = countryService;
         }
@@ -22,26 +19,37 @@ namespace TrackingWebAPI.Controllers
         [HttpGet]
         public IActionResult GetCountry()
         {
-            return Ok(_countryService.GetCountries());
+            var result = _countryService.GetCountries();
+            return Ok(result);
+        }
+        [HttpGet("GetByType")]
+        public IActionResult GetByType(bool type)
+        {
+            var result = _countryService.GetCountries(type);
+            return Ok(result);
         }
 
         [HttpPost]
-        public IActionResult AddCountry(CountryMaster _country) {
-
-            _countryService._AddCountry(_country);
+        public IActionResult AddCountry(CountryMaster country)
+        {
+            _countryService._AddCountry(country);
             return Ok("Country Added");
         }
 
-        [HttpPut]
-        public IActionResult UpdateCountry(CountryMaster _country)
+        [HttpPut ("{countryId}")]
+        public IActionResult UpdateCountry(int countryId, [FromBody] CountryMaster country)
         {
-            _countryService._UpdateCountry(_country);
+            _countryService._UpdateCountry(countryId, country);
             return Ok("Country Updated");
         }
-        [HttpDelete("Id")]
-        public IActionResult DeleteCountry(int id) {
-            _countryService._DeleteCountry(id);
+
+        [HttpDelete("{countryId}")]
+        public IActionResult DeleteCountry(int countryId)
+        {
+            _countryService._DeleteCountry(countryId);
             return Ok("Country Deleted");
         }
+
+       
     }
 }
