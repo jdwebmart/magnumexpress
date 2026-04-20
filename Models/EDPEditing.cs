@@ -18,7 +18,7 @@ namespace TrackingWebAPI.Models
         public string? Contents { get; set; }
         public string? Remarks { get; set; }
         public string? createdby { get; set; }
-        public DateTime? createdon { get; set; }
+        public DateTime? createdon { get; set; } = DateTime.UtcNow;
         public string? mdfby { get; set; }
         public DateTime? mdfon { get; set; }
         public string? IsActive { get; set; }

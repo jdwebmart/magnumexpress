@@ -43,12 +43,13 @@ namespace TrackingWebAPI.Services
                 existingStockTransfer.TransferDate = StockTransfer.TransferDate;
                 existingStockTransfer.FromOffice = StockTransfer.FromOffice;
                 existingStockTransfer.ToOffice = StockTransfer.ToOffice;
+                existingStockTransfer.ItemName = StockTransfer.ItemName;
                 existingStockTransfer.Quantity = StockTransfer.Quantity;
                 existingStockTransfer.StartNo = StockTransfer.StartNo;
                 existingStockTransfer.EndNo = StockTransfer.EndNo;
                 existingStockTransfer.BalQuantity = StockTransfer.BalQuantity;
-                existingStockTransfer.mdfby = StockTransfer.mdfby;
-                existingStockTransfer.mdfon = StockTransfer.mdfon;
+                existingStockTransfer.mfdby = StockTransfer.mfdby;
+                existingStockTransfer.mfdon = StockTransfer.mfdon;
                 existingStockTransfer.IsActive = StockTransfer.IsActive;
                 await _context.SaveChangesAsync();
             }

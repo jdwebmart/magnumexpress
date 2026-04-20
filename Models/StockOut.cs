@@ -17,7 +17,7 @@ namespace TrackingWebAPI.Models
         public int? EndNo { get; set; }
         public decimal? BalQuantity { get; set; }
         public string? createdby { get; set; }
-        public DateTime? createdon { get; set; }
+        public DateTime? createdon { get; set; } = DateTime.UtcNow;
         public string? mdfby { get; set; }
         public DateTime? mdfon { get; set; }
         public string? IsActive { get; set; }

@@ -35,6 +35,7 @@ namespace DALCLASS.DBContact
         public DbSet<TrackingWebAPI.Models.StockOut> stockOut { get; set; }
         public DbSet<TrackingWebAPI.Models.StockPaymentVoucher> stockPaymentVoucher { get; set; }
         public DbSet<TrackingWebAPI.Models.StockIssue> stockIssue { get; set; }
+        public DbSet<TrackingWebAPI.Models.StockIssueToEmployeeMaster> StockIssueToEmployee { get; set; }
         public DbSet<TrackingWebAPI.Models.AWBStockRequest> aWBStockRequest { get; set; }
         public DbSet<TrackingWebAPI.Models.StockReturn> stockReturn { get; set; }
 

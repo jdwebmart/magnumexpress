@@ -7,7 +7,7 @@ namespace TrackingWebAPI.Models
         [Key]
         public int ZoneId { get; set; }
         [Required]
-        public string ZoneName { get; set; }
+        public string? ZoneName { get; set; }
         public bool isInternational { get; set; }
         public bool IsActive { get; set; }
 

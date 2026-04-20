@@ -42,8 +42,8 @@ namespace TrackingWebAPI.Services
             {
                 existingCancelAWB.AWBNumber = CancelAWB.AWBNumber;
                 existingCancelAWB.Reason = CancelAWB.Reason;
-                existingCancelAWB.mdfby = CancelAWB.mdfby;
-                existingCancelAWB.mdfon = CancelAWB.mdfon;
+                existingCancelAWB.mfdby = CancelAWB.mfdby;
+                existingCancelAWB.mfdon = CancelAWB.mfdon;
                 existingCancelAWB.IsActive = CancelAWB.IsActive;
                 await _context.SaveChangesAsync();
             }

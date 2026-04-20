@@ -22,7 +22,7 @@ namespace TrackingWebAPI.Models
         public string? modifiedBy { get; set; }
         public DateTime? modifieddate { get; set; }
         public string? createdBy { get; set; }
-        public DateTime? createdDate { get; set; }
+        public DateTime? createdDate { get; set; } = DateTime.UtcNow;
         [Column("end_dt")]
         public string? EndDate { get; set; }
 

@@ -7,17 +7,17 @@ namespace TrackingWebAPI.Models
     {
         [Key]
         public int MAMID { get; set; }
-        public string OfficeName { get; set; }
-        public string BoyName { get; set; }
-        public string MessageType { get; set; }
-        public string TextMessage { get; set; }
-        public string UploadImage { get; set; }
+        public string? OfficeName { get; set; }
+        public string? BoyName { get; set; }
+        public string? MessageType { get; set; }
+        public string? TextMessage { get; set; }
+        public string? UploadImage { get; set; }
         public string createdBy { get; set; }
-        public DateTime? createdDate { get; set; }
-        public string modifyedBy { get; set; }
+        public DateTime? createdDate { get; set; } = DateTime.UtcNow;
+        public string? modifyedBy { get; set; }
         public DateTime? ModifyedOn { get; set; }
-        public string IsActive { get; set; }
+        public string? IsActive { get; set; }
         [Column("end_dt")]
-        public string EndDate { get; set; }
+        public string? EndDate { get; set; }
     }
 }
