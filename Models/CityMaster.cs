@@ -18,7 +18,7 @@ namespace TrackingWebAPI.Models
         public int ModifiedBy { get; set; } 
         public DateTime ModifiedDate { get; set; }
         public int CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public string CountryName { get; internal set; }
         public string ZoneName { get; internal set; }
         public string StateName { get; internal set; }

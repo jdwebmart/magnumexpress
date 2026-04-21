@@ -9,11 +9,11 @@ namespace TrackingWebAPI.Models
         [Key]
         public int StateId { get; set; }
         [Required]
-        public int CountryId { get; set; }
-        public string StateType { get; set; }
+        public int? CountryId { get; set; }
+        public string? StateType { get; set; }
 
 
-        public string StateCode { get; set; }
+        public string? StateCode { get; set; }
         public string StateName { get; set; }
         //public string GSTIN { get; set; }
 
@@ -21,6 +21,6 @@ namespace TrackingWebAPI.Models
         //public string EWayBillGSTNumber { get; internal set; }
         //public decimal? EWayBillIntraStateLimit { get; internal set; }
         public bool isInternational { get; set; }
-        public string CountryName { get; set; }
+        public string? CountryName { get; set; }
     }
 }

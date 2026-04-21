@@ -23,7 +23,7 @@ namespace TrackingWebAPI.Models
         public string? City { get; set; }
         public string? State { get; set; }
         public string? createdBy { get; set; }
-        public DateTime? createdDate { get; set; }
+        public DateTime? createdDate { get; set; } = DateTime.UtcNow;
         public string? modifyedBy { get; set; }
         public DateTime? ModifyedOn  { get; set; }
         public string? IsActive { get; set; }

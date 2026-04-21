@@ -40,7 +40,7 @@ namespace TrackingWebAPI.Models
         public string? Document5 { get; set; }
         public string? Document6 { get; set; }
         public string? createdBy { get;set; }
-        public DateTime? createdOn { get; set; }
+        public DateTime? createdOn { get; set; } = DateTime.UtcNow;
         public string? status { get; set; }
         public DateTime? end_dt { get; set; }
 

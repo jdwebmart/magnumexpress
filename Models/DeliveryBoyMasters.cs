@@ -15,7 +15,7 @@ namespace TrackingWebAPI.Models
         public string? AllowMobileApplication { get; set; }
         public string SIMNo { get; set; }
         public string? createdBy { get; set; }
-        public DateTime? createdDate { get; set; }
+        public DateTime? createdDate { get; set; } = DateTime.UtcNow;
         public string? modifyedBy { get; set; }
         public DateTime? ModifyedOn { get; set; }
         public string? IsActive { get; set; }
